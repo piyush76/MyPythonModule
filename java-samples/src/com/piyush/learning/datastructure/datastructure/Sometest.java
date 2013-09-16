@@ -2,7 +2,7 @@
  * Sometest
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.datastructure;
+package com.piyush.learning.datastructure.datastructure;
 
 /**
  * @author piyush

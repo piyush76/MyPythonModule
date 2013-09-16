@@ -2,7 +2,7 @@
  * MultipleThreadTest
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.thread;
+package com.piyush.learning.thread;
 
 /**
  * @author piyush
@@ -10,7 +10,7 @@ package com.test.thread;
 public class MultipleThreadTest {
 
     public static void main(String[] args) {
-       MultipleThread t =  new MultipleThread();
+        MultipleThread t = new MultipleThread();
         Thread t1 = new Thread(t);
         t1.start();
 

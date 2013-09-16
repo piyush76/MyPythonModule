@@ -2,15 +2,15 @@
  * MyTestThread
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.thread;
+package com.piyush.learning.thread;
 
 /**
  * @author piyush
  */
-public class MyTestThread implements Runnable  {
+public class MyTestThread implements Runnable {
     Thread t;
 
-    MyTestThread (){
+    MyTestThread() {
         t = new Thread(this, "Demo Thread");
         System.out.println("Child thread: " + t);
         t.start();
@@ -23,7 +23,7 @@ public class MyTestThread implements Runnable  {
                 System.out.println("Sleeping " + Thread.currentThread().getName());
                 Thread.sleep(1000);
             }
-        } catch (InterruptedException e) {
+        } catch(InterruptedException e) {
             System.out.println("Child interrupted.");
         }
         System.out.println("Exiting child thread.");

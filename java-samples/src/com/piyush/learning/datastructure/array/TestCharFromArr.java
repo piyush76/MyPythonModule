@@ -2,14 +2,13 @@
  * TestCharFromArr
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.array;
+package com.piyush.learning.datastructure.array;
 
 /**
  * @author piyush
- * Write a short Java program that outputs all possible strings formed by
- * using the characters 'c', 'a', 'r', 'b', 'o' , and 'n' exactly once.
- * ca,car,carb,cab,carbon,carbo,can,cor,con,cob
- *
+ *         Write a short Java program that outputs all possible strings formed by
+ *         using the characters 'c', 'a', 'r', 'b', 'o' , and 'n' exactly once.
+ *         ca,car,carb,cab,carbon,carbo,can,cor,con,cob
  */
 
 public class TestCharFromArr {
@@ -25,11 +24,11 @@ public class TestCharFromArr {
     }
 
     private static void pickCharAt(int position) {
-        if (position > 5)
+        if(position > 5) {
             System.out.println(String.valueOf(result));
-        else
-            for (int i=0; i<6; i++) {
-                if (!picked[i]) {
+        } else {
+            for(int i = 0; i < 6; i++) {
+                if(!picked[i]) {
                     result[position] = source[i];
                     picked[i] = true;
                     pickCharAt(position + 1);
@@ -38,7 +37,7 @@ public class TestCharFromArr {
                 }
 
             }
+        }
     }
-
 
 }

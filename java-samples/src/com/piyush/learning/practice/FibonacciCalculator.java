@@ -1,4 +1,4 @@
-package com.test.practice;
+package com.piyush.learning.practice;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Java program to calculate and print Fibonacci number using both recursion and Iteration.
  * Fibonacci number is sum of previous two Fibonacci numbers fn= fn-1+ fn-2
  * first 10 Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+ *
  * @author
  */
 public class FibonacciCalculator {
@@ -16,12 +17,11 @@ public class FibonacciCalculator {
         System.out.println("Enter number upto which Fibonacci series to print: ");
         int number = new Scanner(System.in).nextInt();
 
-        System.out.println("Fibonacci series upto " + number +" numbers : ");
+        System.out.println("Fibonacci series upto " + number + " numbers : ");
         //printing Fibonacci series upto number
-        for(int i=1; i<=number; i++){
-            System.out.print(fibonacci2(i) +" ");
+        for(int i = 1; i <= number; i++) {
+            System.out.print(fibonacci2(i) + " ");
         }
-
 
     }
 
@@ -30,31 +30,30 @@ public class FibonacciCalculator {
     * This program uses tail recursion to calculate Fibonacci number for a given number
     * @return Fibonacci number
     */
-    public static int fibonacci(int number){
-        if(number == 1 || number == 2){
+    public static int fibonacci(int number) {
+        if(number == 1 || number == 2) {
             return 1;
         }
 
-        return fibonacci(number-1) + fibonacci(number -2); //tail recursion
+        return fibonacci(number - 1) + fibonacci(number - 2); //tail recursion
     }
 
     /*
     * Java program to calculate Fibonacci number using loop or Iteration.
     * @return Fibonacci number
     */
-    public static int fibonacci2(int number){
-        if(number == 1 || number == 2){
+    public static int fibonacci2(int number) {
+        if(number == 1 || number == 2) {
             return 1;
         }
-        int fibo1=1, fibo2=1, fibonacci=1;
-        for(int i= 3; i<= number; i++){
+        int fibo1 = 1, fibo2 = 1, fibonacci = 1;
+        for(int i = 3; i <= number; i++) {
             fibonacci = fibo1 + fibo2; //Fibonacci number is sum of previous two Fibonacci number
             //System.out.println("fibonacci.." + fibonacci);
             fibo1 = fibo2;
             fibo2 = fibonacci;
             //System.out.println("fibonacci.." + fibonacci);
             //System.out.println("fibo2.." + fibo2);
-
 
         }
         return fibonacci; //Fibonacci number

@@ -2,7 +2,7 @@
  * MultipleThread
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.thread;
+package com.piyush.learning.thread;
 
 /**
  * @author piyush

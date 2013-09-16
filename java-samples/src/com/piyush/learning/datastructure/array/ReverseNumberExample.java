@@ -1,8 +1,9 @@
-package com.test.array;
+package com.piyush.learning.datastructure.array;
 
 /**
  * @author piyush
  */
+
 /**
  * Simple Java program to reverse a number in Java using loop and operator
  * This program also shows example of using division operator(/) and Remainder Operator(%)
@@ -24,22 +25,22 @@ public class ReverseNumberExample {
     * reverse a number in Java using iteration
     * @return reverse of number
     */
-    public static int reverse(int number){
+    public static int reverse(int number) {
         int reverse = 0;
         int remainder = 0;
-        int count  = 1;
-        do{
-            System.out.println("loop " +count);
-            remainder = number%10;
+        int count = 1;
+        do {
+            System.out.println("loop " + count);
+            remainder = number % 10;
             System.out.println("rem " + remainder);
-            reverse = reverse*10 + remainder;
+            reverse = reverse * 10 + remainder;
             System.out.println("rev " + reverse);
             System.out.println("num1 " + number);
-            number = number/10;
+            number = number / 10;
             System.out.println("num2 " + number);
             count++;
 
-        }while(number > 0);
+        } while(number > 0);
 
         return reverse;
     }

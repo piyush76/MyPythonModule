@@ -2,7 +2,7 @@
  * TestNew
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test;
+package com.piyush.learning.basicjava;
 
 /**
  * @author piyush
@@ -15,9 +15,9 @@ public class TestNew {
         System.out.println(m);
         n = new TestNew();
         System.out.println(n);
-        m=n;
+        m = n;
         System.out.println(m);
-        n= new TestNew();
+        n = new TestNew();
         System.out.println(n);
         System.out.println(m);
     }

@@ -2,7 +2,7 @@
  * Test
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test;
+package com.piyush.learning.basicjava;
 
 public class JoyOfHex {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@
  * TestThread
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.thread;
+package com.piyush.learning.thread;
 
 /**
  * @author piyush
@@ -11,7 +11,7 @@ public class TestThread {
 
     public static void main(String[] args) {
         new MyTestThread();
-        try{
+        try {
             System.out.println(Thread.currentThread().getName());
             Thread.sleep(200);
         } catch(InterruptedException e) {

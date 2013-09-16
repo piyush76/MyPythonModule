@@ -2,7 +2,7 @@
  * SearchArrayElement
  * Copyright (c) 2001-2006 MessageOne Inc.
  */
-package com.test.array;
+package com.piyush.learning.datastructure.array;
 
 /**
  * @author piyush
