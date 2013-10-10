@@ -7,7 +7,7 @@ package com.piyush.learning.datastructure.array;
 /**
  * @author piyush
  */
-public class TestArray {
+public class TestArrayCloning {
 
     public static void main(String[] args) {
         int[] a = {11, 12, 13, 14, 15};
