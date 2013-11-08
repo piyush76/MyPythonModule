@@ -31,7 +31,9 @@ public class ArraySorter {
 
     /**
      * Bubble Sort Comparison O(N2) notation.
-     * For every outer loop the inner loop runs through N times
+     * For every outer loop the inner loop runs through N times.
+     *
+     *
      */
 
     public static int[] bubbleSortArray(int[] arr) {
