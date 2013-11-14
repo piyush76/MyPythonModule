@@ -8,6 +8,8 @@ package com.piyush.learning.puzzles;
  * To change this template use File | Settings | File Templates.
  */
 
+import java.util.Collections;
+
 /**
  * Implement an algorithm to determine if a
  * string has all unique characters.
@@ -23,6 +25,11 @@ public class TestUniqueCharInString {
 
 
 }
+
+    /**
+     *   O(n^2) complexity
+     */
+
 
     public static boolean testUnique1(String someString) {
 
@@ -56,13 +63,15 @@ public class TestUniqueCharInString {
         for(int i=0;i<someString.length();i++)  {
             int val = someString.charAt(i) ;
 
-            System.out.println("Val---" + val);
+            //System.out.println("Val---" + val);
             if(char_set[val])
                 return false;
             char_set[val]=true;
         }
         return true;
     }
+
+
 
 
 
