@@ -15,10 +15,14 @@ import java.util.Arrays;
 public class FindDuplicateElementArray {
 
     public static void main(String[] args) {
-        int arr[] = new int[]{5, 3, 2, 7, 9, 10, 1, 4, 44, 77, 8, 12, 21};
+        int arr[] = new int[]{5, 3, 2, 7, 9, 10, 2, 4, 3, 3, 3, 3, 3, 77, 8, 2, 21};
 
         checkForDuplicate(arr);
         checkForDuplicateSorted(arr);
+        int i = countForMaximumAppeared(arr);
+        System.out.println("Appeared " + i + " Times");
+        int j = countForMaximumAppearedSorted(arr);
+        System.out.println("Appeared sorted " + j + " Times");
 
     }
 
@@ -65,10 +69,49 @@ public class FindDuplicateElementArray {
     }
 
     /**
-     *
-     * Given an array of n numbers.
-     * Give an algorithm for finding the first element in the array which is repeated?
-     *
+     * Given an array of  numbers. Give an algorithm for finding the element which
+     * appears maximum number of times in the array?
      */
+
+    public static int countForMaximumAppeared(int arr[]) {
+
+        int counter, max = 0;
+        for(int i = 0; i < arr.length - 1; i++) {
+            counter = 0;
+            for(int j = 0; j < arr.length - 1; j++) {
+
+                if(arr[i] == arr[j]) {
+                    counter++;
+                }
+                if(counter > max) {
+                    max = counter;
+                }
+
+            }
+
+        }
+
+        return max;
+    }
+
+    /**
+     * improved by sorting the array first
+     */
+
+    public static int countForMaximumAppearedSorted(int arr[]) {
+
+        int counter, max = 0;
+        Arrays.sort(arr);
+        for(int i = 0; i < arr.length - 1; i++) {
+            counter = 0;
+            if(arr[i] == arr[i + 1]) {
+                counter++;
+            }
+            if(counter > max) {
+                max = counter;
+            }
+        }
+        return max;
+    }
 
 }
