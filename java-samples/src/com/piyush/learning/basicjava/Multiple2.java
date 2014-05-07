@@ -1,4 +1,4 @@
-package src.com.piyush.learning.basicjava;
+package com.piyush.learning.basicjava;
 
 /**
  * Created by piyush on 1/13/14.
