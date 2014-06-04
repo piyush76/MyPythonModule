@@ -4,7 +4,7 @@
  */
 package com.piyush.learning.datastructure.array;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * @author piyush
@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class FindDuplicateElementArray {
 
     public static void main(String[] args) {
-        int arr[] = new int[]{5, 3, 2, 7, 9, 10, 2, 4, 3, 3, 3, 3, 3, 77, 8, 2, 21};
+        int arr[] = new int[]{5, 3, 2, 7, 9, 10, 2, 4,8, 3, 3, 3, 3, 3, 77, 8, 2, 21};
 
         checkForDuplicate(arr);
         checkForDuplicateSorted(arr);
@@ -23,6 +23,13 @@ public class FindDuplicateElementArray {
         System.out.println("Appeared " + i + " Times");
         int j = countForMaximumAppearedSorted(arr);
         System.out.println("Appeared sorted " + j + " Times");
+
+        Map <Integer, Integer> map = totalNumberOfDuplicate(arr);
+        for(Integer key : map.keySet()){
+
+            System.out.println("Found "+ key + " for " +  map.get(key)+ " times");
+
+        }
 
     }
 
@@ -113,5 +120,38 @@ public class FindDuplicateElementArray {
         }
         return max;
     }
+
+
+    /**
+     * This will give all the duplicates with the count.
+     * @param arr
+     */
+
+    public static Map totalNumberOfDuplicate(int arr[]){
+
+        int counter, max =0 ;
+
+        Arrays.sort(arr);
+        Map <Integer,Integer>hashMap = new  TreeMap<Integer,Integer>();
+
+
+        for(int i = 0; i < arr.length - 1; i++) {
+            int num = arr[i];
+
+            if(hashMap.get(num)!=null){
+                Integer val = (Integer) hashMap.get(num);
+                hashMap.put(num,val+1);
+            }else{
+                hashMap.put(num,1);
+            }
+
+        }
+
+        return hashMap;
+
+    }
+
+
+
 
 }
